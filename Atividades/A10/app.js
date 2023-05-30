@@ -65,7 +65,7 @@ const masks = {
       const hour = document.getElementById('hour')
       const cpfValido = validarCpf(cpf);
 
-      console.log(cpf.value);
+      console.log(cpf);
       
       if (cpf.value == '') {
         cpf.classList.add("errorInput")
