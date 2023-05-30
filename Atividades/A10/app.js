@@ -65,6 +65,8 @@ const masks = {
       const hour = document.getElementById('hour')
       const cpfValido = validarCpf(cpf);
 
+      console.log(cpf.value);
+      
       if (cpf.value == '') {
         cpf.classList.add("errorInput")
         alert('O campo CPF não pode estar vazio!')
