@@ -66,7 +66,7 @@ const masks = {
       
       
       let cpf_sm = cpf.value;
-      cpf_sm.replace(/\.,'').replace(/-,'')
+      cpf_sm.replace(/\./g,'').replace(/-/g,'')
                
       const cpfValido = validarCpf(cpf_sm);  
                                      
