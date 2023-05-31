@@ -63,14 +63,8 @@ const masks = {
       const cep = document.getElementById('cep')
       const date = document.getElementById('date')
       const hour = document.getElementById('hour')
-      
-      
-      let cpf_sm = cpf.value;
-      cpf_sm.replace(/\./g,'').replace(/-/g,'')
-               
-      const cpfValido = validarCpf(cpf_sm);  
+      const cpfValido = validarCpf(cpf);  
                                      
-      console.log(cpf);
       
       if (cpf.value == '') {
         cpf.classList.add("errorInput")
