@@ -253,12 +253,8 @@ function apresentarDados( data ){
 function buscaDados(e){
     let busca = buscador.value;
       
-    if (document.getElementById('shortName').value == "") {
-        document.getElementById("visibilidade").style.display = "block";
-      } else {
-        document.getElementById("visibilidade").style.display = "none";
-      }
-
+    document.getElementById("visibilidade").style.display = "block";
+      
       limpaForm();
     
     const option = {
@@ -267,7 +263,11 @@ function buscaDados(e){
         cache:'default'
     }
 
-
+    //if (document.getElementById('shortName').value == "" || document.getElementById('shortName').value == " ") {
+    //    document.getElementById("visibilidade").style.display = "block";
+    //  } else {
+    //    document.getElementById("visibilidade").style.display = "none";
+    //  }
 
 
     fetch( `https://brapi.dev/api/quote/${busca}` )
@@ -275,7 +275,7 @@ function buscaDados(e){
         response.json()
         .then( ( data ) => { apresentarDados( data.results[0] );
             
-
+            console.log(document.getElementById('shortName').value);
 
         } )
     } ).catch( e => {
@@ -286,10 +286,6 @@ function buscaDados(e){
 
 }
 
-//} ).catch( function (e) {
-//    console.log(e);
-//    document.getElementById("visibilidade").style.display = "none";
-//});
 
 
 function limpaForm()
