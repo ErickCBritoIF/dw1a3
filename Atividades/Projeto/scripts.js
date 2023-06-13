@@ -273,7 +273,14 @@ function buscaDados(e){
     fetch( `https://brapi.dev/api/quote/${busca}` )
     .then( ( response ) => {
         response.json()
-        .then( ( data ) => { apresentarDados( data.results[0] );
+        .then( ( data ) => { 
+            if(data.status === 200) {
+            apresentarDados( data.results[0] );
+                } else {
+                    limpaForm();
+
+            document.getElementById("visibilidade").style.display = "none";
+                    }
             
             console.log(document.getElementById('shortName').value);
 
