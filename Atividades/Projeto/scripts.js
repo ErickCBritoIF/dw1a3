@@ -274,7 +274,7 @@ function buscaDados(e){
     .then( ( response ) => {
         response.json()
         .then( ( data ) => { 
-            if(data.status == 200) {
+            if(data.status == 404) {
             apresentarDados( data.results[0] );
                 } else {
                     limpaForm();
