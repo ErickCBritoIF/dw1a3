@@ -281,6 +281,7 @@ function buscaDados(e){
                     } else {
                         limpaForm();
                         document.getElementById("visibilidade").style.display = "none";
+                        alert("Por favor, digite um código válido!");
                     }
  
             
