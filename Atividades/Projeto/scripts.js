@@ -275,7 +275,13 @@ function buscaDados(e){
         response.json()
         .then( ( data ) => { 
            
-            apresentarDados( data.results[0] );
+            if (data.results) {
+                        apresentarDados(data.results[0]);
+                        console.log(document.getElementById('shortName').value);
+                    } else {
+                        limpaForm();
+                        document.getElementById("visibilidade").style.display = "none";
+                    }
  
             
             console.log(document.getElementById('shortName').value);
